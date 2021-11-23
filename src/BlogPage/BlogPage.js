@@ -1,6 +1,7 @@
 import React from 'react'
 import '../BlogPage/BlogPage.css'
 import { posts } from '../shared/BlogData'
+import { getAmountOfPosts } from '../shared/ProjectLogic.js'
 
 function BlogPage() {
     const generatePosts = posts.map((item) => {
@@ -14,9 +15,6 @@ function BlogPage() {
         )
     })
 
-    const getAmountOfPosts = (arr) => {
-        console.log(arr.length);
-    }
 
     return (
         <>
@@ -24,7 +22,7 @@ function BlogPage() {
                 <h1>Simple Blog</h1>
                 {generatePosts}
                 <div className="count" style={{ textAlign: "center" }}>
-                    <button onClick={() => getAmountOfPosts(posts) }>Get amount of posts</button>
+                    <button onClick={() => getAmountOfPosts(posts)}>Get amount of posts</button>
                 </div>
             </main>
         </>
