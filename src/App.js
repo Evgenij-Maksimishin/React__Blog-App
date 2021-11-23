@@ -5,9 +5,8 @@ import Header from './Header/Header'
 function App() {
   return (
     <div className="App">
-     <h1>fsd</h1>
-     <Header/>
-     <BlogPage/>
+      <Header />
+      <BlogPage />
     </div>
   );
 }
